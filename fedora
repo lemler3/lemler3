@@ -15,7 +15,7 @@ sudo dnf install unzip unrar -y
 
 # Netgear A7000 (nightmare)
 sudo dnf update -y
-sudo dnf install git dkms -y
+sudo dnf install git dkms kernel-devel make -y
 git clone https://github.com/zebulon2/rtl8814au.git
 sudo dkms add ./rtl8814au 
 sudo dkms build -m rtl8814au -v 4.3.21
