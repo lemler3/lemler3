@@ -24,3 +24,16 @@ git clone https://github.com/zebulon2/rtl8814au.git
 sudo dkms add ./rtl8814au 
 sudo dkms build -m rtl8814au -v 4.3.21
 sudo dkms install -m rtl8814au -v 4.3.21
+
+## Nvidia Driver
+sudo dnf update -y
+sudo dnf install fedora-workstation-repositories -y
+sudo dnf config-manager --set-enabled rpmfusion-nonfree-nvidia-driver -y
+reboot
+#### sudo dnf repository-packages rpmfusion-nonfree-nvidia-driver info
+
+### Current GeForce/Quadro/Tesla
+This driver is suitable for any GPU found in 2012 and later.
+
+sudo dnf install xorg-x11-drv-nvidia akmod-nvidia vdpauinfo vdpauinfo libva-vdpau-driver libva-utils libva-vdpau-driver libva-utils -y
+sudo dnf update -y
