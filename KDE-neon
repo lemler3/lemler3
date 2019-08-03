@@ -1,0 +1,6 @@
+##fix root theme when using sudo
+sudo nano /etc/environment
+    XDG_CURRENT_DESKTOP="KDE"
+
+## for notifications as in runelite  
+sudo apt install libnotify-bin python-notify
