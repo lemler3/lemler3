@@ -28,12 +28,12 @@ RequiredBy=multi-user.target
 *****************
 sudo systemctl enable reflector
 
-## set up graphics
+## install graphics for nvidia
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
-sudo nvidia-xconfig
-sudo nvidia-settings (enable fullpipline compositing)
-nano /etc/X11/xorg.conf
 
+## disable mouse acceleration with libinput
+sudo nano /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+****************************
 Section "InputClass"
 	Identifier "My Mouse"
 	Driver "libinput"
@@ -41,6 +41,7 @@ Section "InputClass"
 	Option "AccelProfile" "flat"
 	Option "AccelSpeed" "0"
 EndSection
+****************************
 
 ## install yay
 sudo pacman -S go git base-devel linux-headers
