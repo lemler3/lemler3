@@ -105,3 +105,17 @@ fi
 
 sudo pacman -S nerd-font-complete
 ubuntu-mono-nerd-reg
+
+### fix steam
+##forshotcuts
+sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam'
+
+###or you can set it in your environment.
+sudo nano "/etc/environment"
+
+***************************
+export STEAM_FRAME_FORCE_CLOSE=1
+steam
+***************************
+
+
