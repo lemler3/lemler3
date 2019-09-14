@@ -86,6 +86,8 @@ sudo pacman -S pacman-contrib
 sudo pacman -S wine-staging
 sudo pacman -S $(pactree -l wine-staging)
 
+## better font such as japanese characters
+sudo pacman -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts
 
 #set up powerline-shell for bash shell
 sudo pacman -S python-pip 
