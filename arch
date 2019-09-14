@@ -8,7 +8,7 @@ un comment "# %wheel ALL=(ALL) NOPASSWD: ALL"
 ##get faster mirrorlist
 sudo pacman -S reflector rsync curl
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-sudo reflector --verbose --country 'United States'  -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country 'United States'  -l 15 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syyu
 
 ##get fastest mirrorlist on everyreboot
