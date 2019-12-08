@@ -3,55 +3,22 @@
 useradd -m -g users -G wheel -s /bin/bash lemler3
 paswwd lemler3
 EDITOR=nano visudo
-un comment "# %wheel ALL=(ALL) NOPASSWD: ALL"
 
 ##get faster mirrorlist
 sudo pacman -S reflector rsync curl
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-sudo reflector --verbose --country 'United States'  -l 15 --sort rate --save /etc/pacman.d/mirrorlist
-sudo pacman -Syyu
-
-##get fastest mirrorlist on everyreboot
-sudo nano /etc/systemd/system/reflector.service
-*****************
-[Unit]
-Description=Pacman mirrorlist update
-Requires=network-online.target
-After=network-online.target
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/reflector --protocol http --latest 30 --number 20 --sort rate --save /etc/pacman.d/mirrorlist
-
-[Install]
-RequiredBy=multi-user.target
-*****************
-sudo systemctl enable reflector
+nano .bashrc
+*************************************
+alias rank='sudo reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist'
+*************************************
 
 ## install graphics for nvidia
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
 
-## disable mouse acceleration with libinput
-sudo nano /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
-****************************
-Section "InputClass"
-	Identifier "My Mouse"
-	Driver "libinput"
-	MatchIsPointer "yes"
-	Option "AccelProfile" "flat"
-	Option "AccelSpeed" "0"
-EndSection
-****************************
-
 ## install yay
-sudo pacman -S go git base-devel linux-headers
-
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
 
 ##install system packages
-bash-completion jdk8 flashplugin intel-ucode network-manager-applet unrar
+bash-completion jdk8 flashplugin intel-ucode
 
 ##set default java
 archlinux-java status
@@ -87,7 +54,9 @@ sudo pacman -S wine-staging
 sudo pacman -S $(pactree -l wine-staging)
 
 ## better font such as japanese characters
-sudo pacman -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji
+yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-vista-fonts ttf-monaco ttf-qurancomplex-fonts
+sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
+
 
 #set up powerline-shell for bash shell
 sudo pacman -S python-pip 
@@ -95,7 +64,6 @@ sudo pip install powerline-shell
 mkdir -p ~/.config/powerline-shell && \
 powerline-shell --generate-config > ~/.config/powerline-shell/config.json
 nano ~/.bashrc
-
 ******************
 function _update_ps1() {
     PS1=$(powerline-shell $?)
@@ -106,13 +74,9 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 fi
 ******************
 
-sudo pacman -S nerd-font-complete
-ubuntu-mono-nerd-reg
-
 ### fix steam
 ##forshotcuts
 sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam'
-
 ###or you can set it in your environment.
 sudo nano "/etc/environment"
 
@@ -120,5 +84,3 @@ sudo nano "/etc/environment"
 export STEAM_FRAME_FORCE_CLOSE=1
 steam
 ***************************
-
-
