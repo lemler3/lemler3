@@ -5,7 +5,7 @@ paswwd lemler3
 EDITOR=nano visudo
 
 ##get faster mirrorlist
-sudo pacman -S reflector rsync curl
+sudo pacman -S reflector rsync rsync
 nano .bashrc
 *************************************
 alias rank='sudo reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist'
