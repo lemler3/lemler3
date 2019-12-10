@@ -43,7 +43,7 @@ yay -S firefox google-chrome discord steam minecraft-launcher osbuddy runelite-l
 sudo systemctl enable --now cronie (for timeshift to work properly)
 
 ##install virtualbox
-yay -S virtualbox-host-dkms virtualbox virtualbox-ext-oracle virtualbox-guest-iso vde2
+yay -S virtualbox-host-modules-archvirtualbox-host-modules-arch virtualbox virtualbox-ext-oracle virtualbox-guest-iso vde2
 sudo vboxreload
 sudo modprobe vboxdrv
 sudo gpasswd -a lemler3 vboxusers
