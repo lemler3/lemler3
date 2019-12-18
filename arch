@@ -54,7 +54,7 @@ sudo pacman -S wine-staging
 sudo pacman -S $(pactree -l wine-staging)
 
 ## better font such as japanese characters
-yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-vista-fonts ttf-monaco ttf-qurancomplex-fonts ttf-ms-fonts
+yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-monaco ttf-qurancomplex-fonts ttf-ms-fonts
 sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 
 
