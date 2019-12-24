@@ -18,7 +18,10 @@ sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
 https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
 
 ## install system packages
-bash-completion jdk8 flashplugin intel-ucode
+bash-completion jdk8 flashplugin intel-ucode alsa-utils
+
+## save alsamixer sound settings
+sudo alsactl store
 
 ## set default java
 archlinux-java status
