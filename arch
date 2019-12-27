@@ -53,6 +53,12 @@ sudo pacman -S $(pactree -l wine-staging)
 yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-monaco ttf-qurancomplex-fonts ttf-ms-fonts
 sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 
+## lightdm-gtk main monitor
+sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+------
+active-monitor=
+------
+
 ## fix gdm to be on main monitor 
 sudo cp ~/.config/monitors.xml ~gdm/.config/
 
