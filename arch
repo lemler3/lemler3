@@ -1,4 +1,3 @@
-sudo systemctl enable cronie##add user
 
 useradd -m -g users -G wheel -s /bin/bash lemler3
 paswwd lemler3
