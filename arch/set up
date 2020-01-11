@@ -1,0 +1,92 @@
+useradd -m -g users -G wheel -s /bin/bash lemler3
+paswwd lemler3
+EDITOR=nano visudo
+
+##get faster mirrorlist
+sudo pacman -S reflector rsync 
+*************************************
+sudo reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+*************************************
+
+## install graphics for nvidia
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
+
+## install yay
+https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
+
+## install system packages
+bash-completion jdk8 flashplugin intel-ucode alsa-utils
+
+## save alsamixer sound settings
+sudo alsactl store
+
+## set default java
+archlinux-java status
+archlinux-java set
+
+## set up qt5 settings
+1) yay -S  qt5ct adwaita-qt # for gtk2 qt5-styleplugins 
+2) sudo nano /etc/profile # and add the following lines:
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+3) source the file by using: source /etc/profile
+4) Start qt5ct
+
+## install basic applications
+yay -S firefox google-chrome discord steam minecraft-launcher osbuddy runelite-launcher obs-studio pamac-aur timeshift thunderbird transmission-gtk lutris
+sudo systemctl enable --now cronie (for timeshift to work properly)
+
+##install virtualbox
+yay -S virtualbox-host-modules-arch virtualbox virtualbox-ext-oracle virtualbox-guest-iso vde2
+sudo vboxreload
+sudo modprobe vboxdrv
+sudo gpasswd -a lemler3 vboxusers
+
+##install wine
+sudo pacman -S pacman-contrib
+sudo pacman -S wine-staging
+sudo pacman -S $(pactree -l wine-staging)
+
+## better font such as japanese characters
+yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-monaco ttf-qurancomplex-fonts ttf-ms-fonts
+sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
+
+## lightdm-gtk main monitor
+sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+------
+active-monitor=
+------
+
+## fix gdm to be on main monitor 
+sudo cp ~/.config/monitors.xml ~gdm/.config/
+
+## about:config for firefox (gnome)
+layers.acceleration.force-enabled
+general.autoscroll
+
+##set up powerline-shell for bash shell
+sudo pacman -S python-pip 
+sudo pip install powerline-shell
+mkdir -p ~/.config/powerline-shell && \
+powerline-shell --generate-config > ~/.config/powerline-shell/config.json
+nano ~/.bashrc
+******************
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+******************
+
+### fix steam ( 4 manjaro really)
+##forshotcuts
+sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam'
+###or you can set it in your environment.
+sudo nano "/etc/environment"
+
+***************************
+export STEAM_FRAME_FORCE_CLOSE=1
+steam
+***************************
