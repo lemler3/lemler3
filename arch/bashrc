@@ -54,6 +54,7 @@ alias parrot='curl parrot.live'
 alias ebash='nano ~/.bashrc'
 alias ping='ping -c 3'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias emouse='sudo nano /usr/share/icons/default/index.theme'
 
 #Variables
 export MAKEFLAGS="-j9 -l8"
