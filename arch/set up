@@ -1,5 +1,9 @@
 useradd -m -g users -G wheel -s /bin/bash lemler3
 paswwd lemler3
+
+## testing new user and groups
+useradd -m -G lp,network,power,sys,wheel -s /bin/bash lemler3
+
 EDITOR=nano visudo
 
 ##get faster mirrorlist
