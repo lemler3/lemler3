@@ -47,9 +47,8 @@ sudo modprobe vboxdrv
 sudo gpasswd -a lemler3 vboxusers
 
 ##install wine
-sudo pacman -S pacman-contrib
 sudo pacman -S wine-staging
-sudo pacman -S $(pactree -l wine-staging)
+sudo pacman -S lib32-giflib lib32-mpg123 openal lib32-openal lib32-v4l-utils lib32-libpulse opencl-icd-loader lib32-opencl-icd-loader lib32-libxslt lib32-libva lib32-gtk3 lib32-gst-plugins-base-libs  lib32-vulkan-icd-loader lib32-sdl2 vkd3d lib32-vkd3d sane libgphoto2 cups samba dosbox
 
 ## better font such as japanese characters
 yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-monaco ttf-qurancomplex-fonts ttf-ms-fonts
