@@ -66,6 +66,7 @@ sudo cp ~/.config/monitors.xml ~gdm/.config/
 ## about:config for firefox (gnome)
 layers.acceleration.force-enabled
 general.autoscroll
+media.hardware-video-decoding.force-enabled
 
 ##set up powerline-shell for bash shell
 sudo pacman -S python-pip 
