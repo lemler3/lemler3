@@ -1,16 +1,13 @@
 useradd -m -g users -G wheel -s /bin/bash lemler3
 paswwd lemler3
+EDITOR=nano visudo
 
 ## testing new user and groups
 useradd -m -G lp,network,power,sys,wheel -s /bin/bash lemler3
 
-EDITOR=nano visudo
-
 ##get faster mirrorlist
 sudo pacman -S reflector rsync 
-*************************************
 sudo reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
-*************************************
 
 ## install graphics for nvidia
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
@@ -29,7 +26,7 @@ archlinux-java status
 archlinux-java set
 
 ## set up qt5 settings
-1) yay -S  qt5ct adwaita-qt # for gtk2 qt5-styleplugins 
+1) yay -S  qt5ct adwaita-qt # for gtk2 qt5-styleplugins gtk-engine-murrine 
 2) sudo nano /etc/profile # and add the following lines:
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
@@ -56,9 +53,9 @@ sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 
 ## lightdm-gtk main monitor
 sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
-------
+======================
 active-monitor=
-------
+======================
 
 ## fix gdm to be on main monitor 
 sudo cp ~/.config/monitors.xml ~gdm/.config/
@@ -74,7 +71,7 @@ sudo pip install powerline-shell
 mkdir -p ~/.config/powerline-shell && \
 powerline-shell --generate-config > ~/.config/powerline-shell/config.json
 nano ~/.bashrc
-******************
+======================
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
@@ -82,7 +79,7 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
-******************
+======================
 
 ### fix steam ( 4 manjaro really)
 ##forshotcuts
@@ -90,7 +87,7 @@ sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam'
 ###or you can set it in your environment.
 sudo nano "/etc/environment"
 
-***************************
+======================
 export STEAM_FRAME_FORCE_CLOSE=1
 steam
-***************************
+======================
