@@ -37,7 +37,7 @@ sudo dnf install libdvdcss -y
 sudo dnf install gstreamer1-plugins-base gstreamer1-plugins-good gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld gstreamer1-plugins-bad-free-extras -y
 
 Other software
-sudo dnf install unzip unrar p7zip -y
+sudo dnf install p7zip p7zip-plugins unrar -y
 
 # Netgear A7000 (nightmare)
 sudo dnf update -y
