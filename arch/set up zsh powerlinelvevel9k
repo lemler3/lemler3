@@ -3,6 +3,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k	 #install powerlevel9k theme 4zsh
 nano ~/.zshrc 	## got to line 11 
 =====================================
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE="nerdfont-complete"
+
 POWERLEVEL9K_DISABLE_PROMPT=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="▶"
@@ -15,3 +18,4 @@ PWOERLEVEL9K_CUSTOM_FEDORA_ICON_BACKGROUND=069
 POWERLEVEL9K_CUSTOM_FEDORA_ICON_FOREROUND=015
 =====================================
 install nerd fonts ## hack looks good fyi
+https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
