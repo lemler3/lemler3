@@ -1,0 +1,36 @@
+## update system
+sudo apt update && sudo apt upgrade
+
+## install tweak tool and ppa applities 
+sudo apt install software-properties-common ## basic ppa support
+sudo add-apt-repository ppa:philip.scott/elementary-tweaks && sudo apt install elementary-tweaks ## e-tweaks ppa & app
+
+## install eddy, app editor, and monitor
+sudo apt install com.github.donadigo.appeditor com.github.stsdc.monitor com.github.donadigo.eddy
+
+## install latest nvidia drivers
+sudo add-apt-repository ppa:graphics-drivers/ppa ## nvidia ppa
+sudo apt update && sudo apt upgrade
+sudo ubuntu-drivers autoinstall
+
+## ms-fonts && flash && opekjdk8
+sudo apt install flashplugin-installer pepperflashplugin-nonfree ttf-mscorefonts-installer openjdk-8-jdk ubuntu-restricted-extras libdvd-pkg libavcodec-extra
+
+## codecs
+sudo apt install ubuntu-restricted-extras libdvd-pkg libavcodec-extra
+
+## Archive Formats and Restricted Extras
+sudo apt install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
+
+## libre office ppa
+sudo add-apt-repository ppa:libreoffice/ppa && sudo apt update 
+sudo apt install libreoffice
+
+
+## timeshift for backups 
+sudo add-apt-repository -y ppa:teejee2008/timeshift && sudo apt-get update
+sudo apt-get install timeshift
+
+## Preload-handles most used applications used by the user
+sudo apt-get install preload
+
