@@ -34,3 +34,7 @@ sudo apt-get install timeshift
 ## Preload-handles most used applications used by the user
 sudo apt-get install preload
 
+## 
+sudo nano /etc/systemd/system.conf 
+DefaultTimeoutStartSec=10
+DefaultTimeoutStopSec=10
