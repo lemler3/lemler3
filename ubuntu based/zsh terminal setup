@@ -1,4 +1,4 @@
-sudo pacman -S zsh -y
+sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  # install ohmyzsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k	 #install powerlevel9k theme 4zsh
 nano ~/.zshrc 	## got to line 11 
