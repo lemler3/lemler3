@@ -34,9 +34,14 @@ sudo apt-get install timeshift
 ## Preload-handles most used applications used by the user
 sudo apt-get install preload
 
-## 
+## root file configs
+
+  # fix that shutdown timer
 sudo nano /etc/systemd/system.conf 
 DefaultTimeoutStartSec=30s
 DefaultTimeoutStopSec=30s
+
+  # edit the swappiness
+sudo nano /etc/sysctl.conf
 vm.swappiness = 10
 
