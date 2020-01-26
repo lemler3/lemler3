@@ -36,5 +36,5 @@ sudo apt-get install preload
 
 ## 
 sudo nano /etc/systemd/system.conf 
-DefaultTimeoutStartSec=10
-DefaultTimeoutStopSec=10
+DefaultTimeoutStartSec=30
+DefaultTimeoutStopSec=30
