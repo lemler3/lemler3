@@ -38,3 +38,5 @@ sudo apt-get install preload
 sudo nano /etc/systemd/system.conf 
 DefaultTimeoutStartSec=30s
 DefaultTimeoutStopSec=30s
+vm.swappiness = 10
+
