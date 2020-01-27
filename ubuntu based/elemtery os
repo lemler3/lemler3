@@ -6,7 +6,7 @@ sudo apt install software-properties-common ## basic ppa support
 sudo add-apt-repository ppa:philip.scott/elementary-tweaks && sudo apt install elementary-tweaks ## e-tweaks ppa & app
 
 ## install eddy, app editor, and monitor
-sudo apt install com.github.donadigo.appeditor com.github.stsdc.monitor com.github.donadigo.eddy
+sudo apt install com.github.donadigo.appeditor com.github.stsdc.monitor com.github.donadigo.eddy com.github.davidmhewitt.torrential
 
 ## install latest nvidia drivers
 sudo add-apt-repository ppa:graphics-drivers/ppa ## nvidia ppa
