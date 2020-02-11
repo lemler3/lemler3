@@ -1,7 +1,0 @@
-sudo mv bash.bashrc /etc/bash.bashrc
-sudo mv DIR_COLORS /etc/
-mv .bashrc ~/.bashrc
-sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
-sudo nano /etc/nanorc
-#paste
-include "/usr/share/nano/*.nanorc"
