@@ -13,7 +13,9 @@ sudo reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
 
 ## install yay
-https://aur.archlinux.org/cgit/aur.git/snapshot/yay.tar.gz
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 ## install system packages
 bash-completion jdk8-openjdk flashplugin intel-ucode alsa-utils
