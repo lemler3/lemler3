@@ -40,8 +40,6 @@ alias ll='exa -al --color=always --group-directories-first' # my preferred listi
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ls='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-
-
 alias s='grep'
 alias cp='cp -v'
 alias mv='mv -v'
@@ -50,11 +48,13 @@ alias rank='sudo reflector --verbose --latest 20 --sort rate --save /etc/pacman.
 alias top='htop'
 alias free='free -h'
 alias myip="curl http://ipecho.net/plain; echo"
-alias parrot='curl parrot.live'
 alias ebash='nano ~/.bashrc'
 alias ping='ping -c 3'
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias emouse='sudo nano /usr/share/icons/default/index.theme'
+
+#Alias for fun
+alias parrot='curl parrot.live'
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 #Variables
 export MAKEFLAGS="-j9 -l8"
