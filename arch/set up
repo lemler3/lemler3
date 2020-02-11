@@ -25,7 +25,7 @@ sudo alsactl store
 
 ## set default java
 archlinux-java status
-archlinux-java set
+sudo archlinux-java set java-8-openjdk
 
 ## set up qt5 settings
 1) yay -S  qt5ct adwaita-qt # for gtk2 qt5-styleplugins gtk-engine-murrine 
