@@ -1,11 +1,11 @@
 # make dnf faster 
 sudo nano /etc/dnf/dnf.conf
-    [main]
-    gpgcheck=1
-    installonly_limit=3
-    clean_requirements_on_remove=True
-    fastestmirror=true
-    deltarpm=true
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+fastestmirror=true
+deltarpm=true
 # colorize dnf
 sudo nano /etc/dnf/dnf.conf
 color=always
