@@ -70,4 +70,10 @@ sudo dnf install java-1.8.0-openjdk
 sudo dnf install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
 sudo dnf install flash-plugin
 
+Using the Pepper Plugin Application Programming Interface (PPAPI) flash plugin
+1 Click the following link to download the flash plugin: "get.adobe.com/flashplayer/otherversions"
+2 Select Linux 64-bit and then FP 22.0 (or later) for Linux 64-bit(.tar.gz)-PPAPI. You will then have flash_player_ppapi_linux.x86_64.tar.gz.
+3 Unpack the tar into /usr/lib64/chromium-browser/PepperFlash/.
+3Restart chromium. You can see Adobe Flash Player in chrome://plugins.
+
 
