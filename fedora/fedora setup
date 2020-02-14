@@ -65,3 +65,9 @@ rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-font
 
 # install java gui
 sudo dnf install java-1.8.0-openjdk
+
+# install flash, adobe repo 64 bit
+sudo dnf install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+sudo dnf install flash-plugin
+
+
