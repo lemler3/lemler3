@@ -51,7 +51,7 @@ sudo dnf update -y
 sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled rpmfusion-nonfree-nvidia-driver -y
 reboot
-#### sudo dnf repository-packages rpmfusion-nonfree-nvidia-driver info
+#### sudo dnf repository-packages rpmfusion-nonfree-nvidia-driver info | grep nvidia
 
 ### Current GeForce/Quadro/Tesla
 This driver is suitable for any GPU found in 2012 and later.
