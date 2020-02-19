@@ -1,1 +1,1 @@
-sudo apt-get install nvidia-driver-libs-i386:i386 # nvidia 32bit 
+sudo apt-get install nvidia-driver-libs-i386 # nvidia 32bit 
