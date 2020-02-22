@@ -18,7 +18,7 @@ cd yay
 makepkg -si
 
 ## install system packages
-bash-completion jdk8-openjdk flashplugin intel-ucode alsa-utils
+bash-completion jdk8-openjdk flashplugin intel-ucode alsa-utils libva-vdpau-driver
 
 ## save alsamixer sound settings
 sudo alsactl store
