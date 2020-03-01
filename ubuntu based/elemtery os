@@ -16,6 +16,8 @@ sudo ubuntu-drivers autoinstall
 ## ms-fonts && flash && opekjdk8
 sudo apt install flashplugin-installer pepperflashplugin-nonfree ttf-mscorefonts-installer openjdk-8-jdk ubuntu-restricted-extras libdvd-pkg libavcodec-extra
 sudo dpkg-reconfigure libdvd-pkg
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
 
 ## codecs
 sudo apt install ubuntu-restricted-extras libdvd-pkg libavcodec-extra
