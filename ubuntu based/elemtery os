@@ -34,6 +34,9 @@ sudo apt install libreoffice
 sudo add-apt-repository -y ppa:teejee2008/timeshift && sudo apt-get update
 sudo apt-get install timeshift
 
+  ## enable tray icons 
+https://www.linuxuprising.com/2018/08/how-to-re-enable-ayatana-appindicators.html
+
 ## root file configs
 
   # fix that shutdown timer
