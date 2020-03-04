@@ -8,7 +8,7 @@ sudo pacman -Rns catfish galculator-gtk2 gtkhash gtkhash-thunar kvantummanager k
 ==> and uncomment an existing one / default!
 ==> (Maybe without "/boot", depending on PC setup)
 sed -i 's/set theme=/#set theme=/g' /boot/grub/grub.cfg
-sudo nano /etc/default/grub
+sudo nano /etc/default/grub # line 46
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 	# user modifications to groups
