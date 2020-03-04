@@ -16,9 +16,6 @@ sudo echo 'active-monitor=DP-3'| sudo tee -a /etc/lightdm/lightdm-gtk-greeter.co
 	# Manjaro's index.theme /usr/share/icons/default/index.theme
 sudo sed -i 's/Inherits/#Inherits/g' /usr/share/icons/default/index.theme && sudo echo 'Inherits=Adwaita' | sudo tee -a /usr/share/icons/default/index.theme
 
-	# set xfce to default layout # need to be at bottem **reboots pc**
-rm -rf /home/lemler3/.cache/* && rm -rf ~/.config/xfce4  && reboot
-
 	# fix steam not closing to tray # todo 
 	### fix steam ( 4 manjaro really)
 	##forshotcuts
@@ -30,3 +27,6 @@ sudo nano "/etc/environment"
 export STEAM_FRAME_FORCE_CLOSE=1
 steam
 ======================
+
+	# set xfce to default layout # need to be at bottem **reboots pc**
+rm -rf /home/lemler3/.cache/* && rm -rf ~/.config/xfce4  && reboot
