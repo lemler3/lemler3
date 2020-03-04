@@ -1,0 +1,32 @@
+	# remove bloat
+	# may need seahorse for google-chrome keying (still testing)
+sudo pacman -Rns catfish galculator-gtk2 gtkhash gtkhash-thunar kvantummanager kvantum-qt5 kvantum-theme-matchama manjaro-xfce-settings manjaro-documentation-en orage stoken openconnect  networkmanager-openconnect viewnior pidgin audacious qpdfview yelp xcursor-simpleandsoft htop apparmor flatpak snapd pamac-snap-plugin grub-theme-manjaro manjaro-hello manjaro-icons manjaro-application-utility manjaro-release manjaro-wallpapers-18.0 wallpapers-2018 xcursor-vanilla-dmz-aa bauh
+
+	# change remove grub theme	## todo: with sed 
+==> IMPORTANT: Edit /boot/grub/grub.cfg , remove
+==> set theme="/boot/grub/themes/manjaro/theme.txt"
+==> and uncomment an existing one / default!
+==> (Maybe without "/boot", depending on PC setup)
+sudo nano /boot/grub/grub.cfg
+sudo nano /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+# user modifications to groups
+sudo usermod  -g users -G sys,network,scanner,power,rfkill,video,audio,wheel,storage,floppy,log -s /bin/bash lemler3
+
+	# make sure java 8 is default
+sudo archlinux-java set java-8-openjdk
+
+	# reset the lightdm setting to default
+sudo pacman -Rns lightdm-gtk-greeter lightdm-gtk-greeter-settings && sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings
+
+	# set cursor theme to adwaita (default in arch)
+	# Manjaro's index.theme /usr/share/icons/default/index.theme
+sudo sed -i 's/Inherits/#Inherits/g' /usr/share/icons/default/index.theme && sudo echo 'Inherits=Adwaita' | sudo tee -a /usr/share/icons/default/index.theme
+
+	# set xfce to default layout # need to be at bottem
+rm -rf /home/lemler3/.cache/* && rm -rf ~/.config/xfce4  && reboot
+
+
+
+	# fix steam not closing to tray # todo 
