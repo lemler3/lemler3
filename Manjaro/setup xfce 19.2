@@ -11,7 +11,7 @@ sudo nano /boot/grub/grub.cfg
 sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-# user modifications to groups
+	# user modifications to groups
 sudo usermod -g users -G sys,network,scanner,power,rfkill,video,audio,wheel,storage,floppy,log -s /bin/bash lemler3
 
 	# make sure java 8 is default
@@ -29,10 +29,10 @@ sudo sed -i 's/Inherits/#Inherits/g' /usr/share/icons/default/index.theme && sud
 rm -rf /home/lemler3/.cache/* && rm -rf ~/.config/xfce4  && reboot
 
 	# fix steam not closing to tray # todo 
-### fix steam ( 4 manjaro really)
-##forshotcuts
+	### fix steam ( 4 manjaro really)
+	##forshotcuts
 sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam'
-###or you can set it in your environment.
+	###or you can set it in your environment.
 sudo nano "/etc/environment"
 
 ======================
