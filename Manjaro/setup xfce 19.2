@@ -2,14 +2,10 @@
 	# may need seahorse for google-chrome keying (still testing)
 sudo pacman -Rns catfish galculator-gtk2 gtkhash gtkhash-thunar kvantummanager kvantum-qt5 kvantum-theme-matchama manjaro-xfce-settings manjaro-documentation-en orage stoken openconnect  networkmanager-openconnect viewnior pidgin audacious qpdfview yelp xcursor-simpleandsoft htop apparmor flatpak snapd pamac-snap-plugin grub-theme-manjaro manjaro-hello manjaro-icons manjaro-application-utility manjaro-release manjaro-wallpapers-18.0 wallpapers-2018 xcursor-vanilla-dmz-aa bauh gcolor2 xfce4-artwork xfwm4-themes xfce4-goodies gimp hexchat vlc
 
-	# change remove grub theme	## todo: with sed 
-==> IMPORTANT: Edit /boot/grub/grub.cfg , remove
-==> set theme="/boot/grub/themes/manjaro/theme.txt"
-==> and uncomment an existing one / default!
-==> (Maybe without "/boot", depending on PC setup)
+	# change remove grub theme
 sed -i 's/set theme=/#set theme=/g' /boot/grub/grub.cfg
-sudo nano /etc/default/grub # line 46
-sudo rm -rf /etc/default/grub && sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Manjaro &&  sudo grub-mkconfig -o /boot/grub/grub.cfg
+sed 's/.*46/#&/' /etc/default/grub > /home/lemler3/grub
+sudo mv ~/grub /etc/default/
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 	# user modifications to groups
