@@ -7,7 +7,7 @@ sudo pacman -Rns catfish galculator-gtk2 gtkhash gtkhash-thunar kvantummanager k
 ==> set theme="/boot/grub/themes/manjaro/theme.txt"
 ==> and uncomment an existing one / default!
 ==> (Maybe without "/boot", depending on PC setup)
-sudo nano /boot/grub/grub.cfg
+sed -i 's/set theme=/#set theme=/g' /boot/grub/grub.cfg
 sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
