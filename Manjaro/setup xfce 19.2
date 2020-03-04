@@ -1,6 +1,6 @@
 	# remove bloat
 	# may need seahorse for google-chrome keying (still testing)
-sudo pacman -Rns catfish galculator-gtk2 gtkhash gtkhash-thunar kvantummanager kvantum-qt5 kvantum-theme-matchama manjaro-xfce-settings manjaro-documentation-en orage stoken openconnect  networkmanager-openconnect viewnior pidgin audacious qpdfview yelp xcursor-simpleandsoft htop apparmor flatpak snapd pamac-snap-plugin grub-theme-manjaro manjaro-hello manjaro-icons manjaro-application-utility manjaro-release manjaro-wallpapers-18.0 wallpapers-2018 xcursor-vanilla-dmz-aa bauh
+sudo pacman -Rns catfish galculator-gtk2 gtkhash gtkhash-thunar kvantummanager kvantum-qt5 kvantum-theme-matchama manjaro-xfce-settings manjaro-documentation-en orage stoken openconnect  networkmanager-openconnect viewnior pidgin audacious qpdfview yelp xcursor-simpleandsoft htop apparmor flatpak snapd pamac-snap-plugin grub-theme-manjaro manjaro-hello manjaro-icons manjaro-application-utility manjaro-release manjaro-wallpapers-18.0 wallpapers-2018 xcursor-vanilla-dmz-aa bauh gcolor2 xfce4-artwork xfce4-clipman-plugin xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-dict xfce4-eyes-plugin xfwm4-themes xfce4-datetime-plugin xfce4-notes-plugin
 
 	# change remove grub theme	## todo: with sed 
 ==> IMPORTANT: Edit /boot/grub/grub.cfg , remove
@@ -12,21 +12,30 @@ sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # user modifications to groups
-sudo usermod  -g users -G sys,network,scanner,power,rfkill,video,audio,wheel,storage,floppy,log -s /bin/bash lemler3
+sudo usermod -g users -G sys,network,scanner,power,rfkill,video,audio,wheel,storage,floppy,log -s /bin/bash lemler3
 
 	# make sure java 8 is default
 sudo archlinux-java set java-8-openjdk
 
 	# reset the lightdm setting to default
 sudo pacman -Rns lightdm-gtk-greeter lightdm-gtk-greeter-settings && sudo pacman -S lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo echo 'active-monitor=DP-3'| sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf	#set default monitor 
 
 	# set cursor theme to adwaita (default in arch)
 	# Manjaro's index.theme /usr/share/icons/default/index.theme
 sudo sed -i 's/Inherits/#Inherits/g' /usr/share/icons/default/index.theme && sudo echo 'Inherits=Adwaita' | sudo tee -a /usr/share/icons/default/index.theme
 
-	# set xfce to default layout # need to be at bottem
+	# set xfce to default layout # need to be at bottem **reboots pc**
 rm -rf /home/lemler3/.cache/* && rm -rf ~/.config/xfce4  && reboot
 
-
-
 	# fix steam not closing to tray # todo 
+### fix steam ( 4 manjaro really)
+##forshotcuts
+sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam'
+###or you can set it in your environment.
+sudo nano "/etc/environment"
+
+======================
+export STEAM_FRAME_FORCE_CLOSE=1
+steam
+======================
