@@ -65,6 +65,9 @@ active-monitor=
 ## fix gdm to be on main monitor 
 sudo cp ~/.config/monitors.xml ~gdm/.config/
 
+## tray icons in gnome
+yay -S gnome-shell-extension-appindicator-git libappindicator-gtk2 libappindicator-gtk3 libappindicator-sharp
+
 ## about:config for firefox (gnome)
 layers.acceleration.force-enabled
 general.autoscroll
