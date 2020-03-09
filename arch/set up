@@ -5,6 +5,9 @@ EDITOR=nano visudo
 ## testing new user and groups
 useradd -m -G lp,network,power,sys,wheel -s /bin/bash lemler3
 
+# enable daylight savings 
+sudo timedatectl set-ntp true
+
 ##get faster mirrorlist
 sudo pacman -S reflector rsync 
 sudo reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
