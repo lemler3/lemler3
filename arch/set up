@@ -16,7 +16,7 @@ sudo reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
 
 ## install yay
-git clone https://aur.archlinux.org/yay.git
+sudo pacman -S git -y && git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
