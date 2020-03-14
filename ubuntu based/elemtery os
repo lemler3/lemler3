@@ -41,6 +41,9 @@ sudo apt-get install timeshift
   ## enable tray icons 
 https://www.linuxuprising.com/2018/08/how-to-re-enable-ayatana-appindicators.html
 
+# remove nm-applet from displaying in wingpanel 
+sudo mv /etc/xdg/autostart/nm-applet.desktop /etc/xdg/autostart/nm-applet.desktop.back
+
 ## root file configs
 
   # fix that shutdown timer
