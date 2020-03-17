@@ -7,7 +7,6 @@ clean_requirements_on_remove=True
 fastestmirror=true
 deltarpm=true
 # colorize dnf
-sudo nano /etc/dnf/dnf.conf
 color=always
 color_list_installed_older=yellow
 color_list_installed_newer=bold,yellow
