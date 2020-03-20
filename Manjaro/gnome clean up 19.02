@@ -13,3 +13,7 @@ sudo  rm -rf /usr/share/backgrounds/manjaro-gnome
 
 # just a note that manjaro saves their xorg.conf as nvidia.conf
 /etc/X11/mhwd.d/nvidia.conf
+
+# switch to unstable
+sudo pacman-mirrors --api --set-branch unstable
+sudo pacman-mirrors --fasttrack 10 && sudo pacman -Syyu
