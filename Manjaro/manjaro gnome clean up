@@ -1,0 +1,15 @@
+# clean up note for manjaro 19.02
+
+# update the mirror list with pamac
+# then update the system WITH TERMINAL!!!
+sudo pacman -Syyu # may have to restart
+
+# go to manjaro setting and install drivers/kernel & blah blah blah
+# them REMOVE DA BLOAT!
+sudo pacman -Rns bauh caffeine-ng dconf-editor dynamic-wallpaper-editor gnome-layout-switcher empathy hexchat gtkhash gtkhash-nautilus gthumb yad manjaro-aur-support kvantum-qt5 kvantum-theme-matchama manjaro-gnome-assets-19.0 gnome-shell-extension-nightshellswitcher gparted gnome-notes manjaro-documentation-en evolution seahorse stoken openconnect networkmanager-openconnect transmission-gtk uget lshw mhwd-tui manjaro-application-utility manjaro-artwork manjaro-browser-settings manjaro-dynamic-wallpaper manjaro-gdm-theme-19.0 manjaro-hello manjaro-gdm-tweak manjaro-release manjaro-wallpapers-18.0 illyria-wallpaper papirus-maia-icon-theme wallpapers-juhraya wallpapers-2018 && sudo pacman -S 
+
+# remove extra manjaro wallpapper, couldn't find the package it came with...
+sudo  rm -rf /usr/share/backgrounds/manjaro-gnome
+
+# just a note that manjaro saves their xorg.conf as nvidia.conf
+/etc/X11/mhwd.d/nvidia.conf
