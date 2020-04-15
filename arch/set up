@@ -37,7 +37,7 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 4) Start qt5ct
 
 ## install basic applications
-yay -S firefox discord steam minecraft-launcher osbuddy runelite obs-studio pamac-aur timeshift thunderbird lutris deluge-gtk gufw runescape-launcher
+yay -S firefox discord steam minecraft-launcher osbuddy runelite obs-studio pamac timeshift thunderbird lutris deluge-gtk gufw runescape-launcher google-chrome
 
 sudo pacman -Syu cronie
 sudo systemctl enable --now cronie (for timeshift to work properly)
