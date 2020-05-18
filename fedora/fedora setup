@@ -69,8 +69,8 @@ sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore
 sudo dnf install java-1.8.0-openjdk
 
 # install flash, adobe repo 64 bit
-sudo dnf install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-sudo dnf install flash-plugin
+sudo dnf install http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm -y
+sudo dnf install flash-plugin -y
 
 Using the Pepper Plugin Application Programming Interface (PPAPI) flash plugin
 1 Click the following link to download the flash plugin: "get.adobe.com/flashplayer/otherversions"
