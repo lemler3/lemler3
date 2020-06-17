@@ -1,7 +1,3 @@
-useradd -m -g users -G wheel -s /bin/bash lemler3
-paswwd lemler3
-EDITOR=nano visudo
-
 ## user and groups 
 sudo usermod lemler3 -G sys,log,network,floppy,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel,adm,users
 sudo gpasswd -a lemler3 vboxusers ## after installing virtualbox
