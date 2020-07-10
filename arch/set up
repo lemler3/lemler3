@@ -64,7 +64,7 @@ active-monitor=
 sudo cp ~/.config/monitors.xml ~gdm/.config/
 
 ## tray icons in gnome
-yay -S gnome-shell-extension-appindicator-git libappindicator-gtk2 libappindicator-gtk3 libappindicator-sharp
+yay -S  libappindicator-gtk2 libappindicator-gtk3 
 
 ## about:config for firefox (gnome)
 layers.acceleration.force-enabled
