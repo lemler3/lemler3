@@ -1,11 +1,8 @@
 #
 # ~/.bashrc
 #
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-
 # 
 # # Arch latest news
 # if [ "$PS1" ] && [[ $(ping -c1 www.google.com 2>&-) ]]; then
