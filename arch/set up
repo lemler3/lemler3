@@ -34,7 +34,7 @@ yay -S bash-completion jdk8-openjdk intel-ucode alsa-utils libva-vdpau-driver li
 # 4) Start qt5ct
 
 ## install basic applications && enable cronie && enable ufw
-yay -S firefox discord steam minecraft-launcher osbuddy runelite-git obs-studio pamac-aur timeshift thunderbird lutris deluge-gtk gufw runescape-launcher google-chrome cronie --noconfirm && sudo systemctl enable --now cronie && sudo systemctl enable --now ufw
+yay -S firefox discord steam minecraft-launcher osbuddy runelite obs-studio pamac-aur timeshift thunderbird lutris deluge-gtk gufw runescape-launcher google-chrome cronie --noconfirm && sudo systemctl enable --now cronie && sudo systemctl enable --now ufw
 
 ##install virtualbox
 yay -S virtualbox-host-modules-arch virtualbox virtualbox-ext-oracle virtualbox-guest-iso vde2 --noconfirm
