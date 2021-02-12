@@ -49,7 +49,7 @@ sudo pacman -S lib32-giflib lib32-mpg123 openal lib32-openal lib32-v4l-utils lib
 
 ## better font such as japanese characters
 ## (broken) ttf-qurancomplex-fonts
-yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-monaco  ttf-ms-fonts noto-fonts noto-fonts-cjk
+yay -S ttf-arphic-uming ttf-baekmuk gnu-free-fonts noto-fonts-emoji ttf-monaco  ttf-ms-fonts noto-fonts noto-fonts-cjk --noconfirm
 sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 
 ## lightdm-gtk main monitor
