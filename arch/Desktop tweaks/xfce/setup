@@ -1,1 +1,1 @@
-yay -S xfce4-places-plugin menulibre dockbarx xfce4-dockbarx-plugin xfce4-panel-profiles xfce-theme-greybird elementary-xfce-icons xcursor-vanilla-dmz lightdm-gtk-greeter-settings pavucontrol ffmpegthumbnailer gst-libav gst-plugins-bad gst-plugins-ugly
+yay -S xfce4-places-plugin menulibre dockbarx xfce4-dockbarx-plugin xfce4-panel-profiles xfce-theme-greybird elementary-xfce-icons xcursor-vanilla-dmz lightdm-gtk-greeter-settings pavucontrol ffmpegthumbnailer gst-libav gst-plugins-bad gst-plugins-ugly gvfs
