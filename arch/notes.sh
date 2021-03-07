@@ -7,7 +7,8 @@ sudo timedatectl set-ntp true
 
 ## get faster mirrorlist
 sudo pacman -S reflector rsync --noconfirm
-sudo reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/pacman.d/mirrorlist && time sudo pacman -Syyu
+#old#sudo reflector --verbose --country 'United States' -l 5 --sort rate --save /etc/pacman.d/mirrorlist && time sudo pacman -Syyu
+sudo reflector --age 6 --latest 20 --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist && time sudo pacman -Syyu
 
 ## install graphics for nvidia
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings --noconfirm
