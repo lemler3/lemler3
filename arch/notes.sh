@@ -17,8 +17,7 @@ sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings --noconfir
 sudo pacman -S git --noconfirm && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && yay -S yay --noconfirm
 
 ## install base system packages
-yay -S bash-completion jdk8-openjdk intel-ucode alsa-utils libva-vdpau-driver libvdpau-va-gl usbutils man ffmpegthumbnailer --noconfirm
-
+yay -S bash-completion jdk-lts  amd-ucode alsa-utils libva-vdpau-driver libvdpau-va-gl usbutils man ffmpegthumbnailer --noconfirm
 ## save alsamixer sound settings
 # sudo alsactl store
 
