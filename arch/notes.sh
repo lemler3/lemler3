@@ -11,7 +11,7 @@ sudo pacman -S reflector rsync --noconfirm
 sudo reflector --age 6 --latest 20 --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist && time sudo pacman -Syyu
 
 ## install graphics for nvidia
-sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings --noconfirm
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings lib32-libglvnd lib32-opencl-nvidia --noconfirm
 
 ## install yay
 sudo pacman -S git --noconfirm && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && yay -S yay --noconfirm
