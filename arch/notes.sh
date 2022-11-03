@@ -25,8 +25,8 @@ yay -S bash-completion jdk-lts  amd-ucode alsa-utils libva-vdpau-driver libvdpau
 # archlinux-java status
 # sudo archlinux-java set java-8-openjdk
 
-## set up qt5 settings (notes) (need to make into bash script)
-# 1) yay -S  qt5ct adwaita-qt6-git qgnomeplatform-qt6 # for gtk2 qt5-styleplugins gtk-engine-murrine
+## set up qt6 settings (notes) (need to make into bash script)
+# 1) yay -S  qt6ct adwaita-qt6-git qgnomeplatform-qt6 # for gtk2 qt5-styleplugins gtk-engine-murrine
 # 2) sudo nano /etc/profile # and add the following lines:
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 # export QT_AUTO_SCREEN_SCALE_FACTOR=1
