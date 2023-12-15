@@ -17,7 +17,7 @@ sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings lib32-libg
 sudo pacman -S git --noconfirm && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && yay -S yay --noconfirm
 
 ## install base system packages
-yay -S bash-completion jdk-lts  amd-ucode alsa-utils libva-vdpau-driver libvdpau-va-gl usbutils man ffmpegthumbnailer --noconfirm
+yay -S bash-completion jdk-lts  amd-ucode alsa-utils libvdpau-va-gl usbutils man ffmpegthumbnailer --noconfirm
 ## save alsamixer sound settings
 # sudo alsactl store
 
@@ -34,7 +34,7 @@ yay -S bash-completion jdk-lts  amd-ucode alsa-utils libva-vdpau-driver libvdpau
 # 4) Start qt5ct
 
 ## install basic applications && enable cronie && enable ufw
-yay -S firefox discord steam minecraft-launcher runelite obs-studio pamac-aur timeshift thunderbird lutris deluge-gtk gufw runescape-launcher google-chrome cronie --noconfirm && sudo systemctl enable --now cronie && sudo systemctl enable --now ufw
+yay -S firefox discord steam minecraft-launcher runelite obs-studio v4l2loopback-dkms pamac-aur timeshift thunderbird lutris deluge-gtk gufw runescape-launcher google-chrome cronie --noconfirm && sudo systemctl enable --now cronie && sudo systemctl enable --now ufw
 
 ##install virtualbox
 yay -S virtualbox-host-modules-arch virtualbox virtualbox-ext-oracle virtualbox-guest-iso vde2 --noconfirm
